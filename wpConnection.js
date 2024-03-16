@@ -4,7 +4,7 @@ const terminalQR = require('qrcode-terminal');
 const pino = require("pino");
 const moment = require("moment-timezone");
 const sessionManager  = require('./deleteSession');
-const db = require('./dbConnection');
+const db = require('./dbconnection');
 const formatarNumero = require('./formatarNumero');
 
 const axios = require('axios');
