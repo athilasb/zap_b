@@ -1,4 +1,4 @@
-const db = require('../dbConnection');
+const db = require('../dbconnection');
 const ajax = require('./ajax');
 
 async function init(io, app, Mai, wp_connection) {
