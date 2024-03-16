@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Usuário</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Buscar Usuário</h1>
+    <label for="userId">ID do Usuário:</label>
+    <input type="text" id="userId">
+    <button id="fetchUser">Buscar</button>
+    <div id="userInfo"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#fetchUser').click(function() {
+                var userId = $('#userId').val();
+                $.ajax({
+                    url: 'http://localhost:3000/user/' + userId, // Substitua pela URL da sua API
+                    type: 'GET',
+                    success: function(data) {
+                        $('#userInfo').html('<p>Nome: ' + data.arquivo + '</p>');
+                    },
+                    error: function() {
+                        $('#userInfo').html('<p>Usuário não encontrado.</p>');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

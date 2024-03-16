@@ -1,0 +1,5 @@
+DB_HOST=viaduct.proxy.rlwy.net
+DB_PORT=28318
+DB_USER=root
+DB_PASSWORD=SGIJWgafexJzDhtPttJuebyXXMxNWxXf
+DB_NAME=railway
